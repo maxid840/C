@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>                                   //Preprocesador
+
+//funcion que reciba tres enteros y me devuelva el mayor de los tres
+
+int calcularMax(int, int, int);                                 //Paso 1: Prototipo = indico funcion + variables que voy a usar.
+
+int main()
+{
+    int num1, num2, num3;                                      //Parametros actuales
+
+    printf("Ingrese un valor: ");                              //Paso 3: desarrollo el codigo en main llamando a la funcion
+    scanf("%d",&num1);
+
+    printf("Ingrese un valor: ");
+    scanf("%d",&num2);
+
+    printf("Ingrese un valor: ");
+    scanf("%d",&num3);
+
+    printf("El maximo es: %d",calcularMax(num1, num2, num3));  //Llamo a la funcion
+
+    return 0;
+}
+
+int calcularMax(int num1, int num2, int num3)                  //Paso 2: Cuerpo de la función
+{
+    int max;                                                   //Declaro variable de retorno - parametros formales
+
+    if(num1>=num2 && num1>=num3)
+    {
+        max=num1;
+    }
+    if (num2>=num1 && num2>=num3)
+    {
+        max=num2;
+    }
+    else if (num3>=num1 && num3>=num2)
+    {
+        max=num3;
+    }
+
+    return max;
+
+}
